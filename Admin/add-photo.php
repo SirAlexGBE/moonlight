@@ -123,16 +123,61 @@
             ></i>
             &nbsp; Reservation</a
           >
+          <a
+            href="users.php"
+            class="btn btn-primary btn-block"
+            style="margin-top: 20px"
+          >
+            <i
+              class="fa fa-user"
+              aria-hidden="true"
+              style="font-size: medium"
+            ></i>
+            &nbsp; Users</a
+          >
         </div>
         <div class="col-md-9">
           <h2 class="display-4 text-center" style="margin-top: 20px">
-           <i class="fa fa-plus" aria-hidden="true"></i> Add New Post
-            <!-- Add row -->
+            <i
+              class="fa fa-camera"
+              aria-hidden="true"
+              style="color: blue"
+            ></i>
+            Add New Photo
+          </h2>
+          <!-- row start -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="Image">Image:</label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  name="Image"
+                  id="Image"
+                  placeholder="Add Images"
+                  aria-describedby="fileHelpId"
+                />
+                <small id="fileHelpId" class="form-text text-muted"
+                  >Maximum: 80MB
+                </small>
+              </div>
 
-             <!-- row end -->
+              <div class="form-group">
+                <button type="submit" name="submit" class="btn btn-success">
+                  Add Photo
+                </button>
+                <button type="reset" name="reset" class="btn btn-danger">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- row end -->
+        </div>
+      </div>
 
+      <!-- content end -->
     </div>
-
-    <!-- content end -->
   </body>
 </html>

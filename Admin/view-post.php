@@ -138,8 +138,30 @@
         </div>
         <div class="col-md-9">
           <h2 class="display-4 text-center" style="margin-top: 20px">
-            View All Post
+            <i class="fa fa-newspaper-o" aria-hidden="true"></i> View All Post
           </h2>
+          <!-- row start -->
+          <div class="row">
+            <table class="table table-dark table-hover table-bordered">
+              <thead class="text-center">
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Content</th>
+                  <th>Photo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row"></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- row end -->
+          </div>
         </div>
 
         <!-- content end -->
