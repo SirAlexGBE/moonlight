@@ -148,6 +148,7 @@
           <!-- row start -->
           <div class="row">
             <div class="col-md-12">
+                <form action="" method="post">
               <div class="form-group">
                 <label for="Image">Image:</label>
                 <input
@@ -171,6 +172,7 @@
                   Cancel
                 </button>
               </div>
+                </form>
             </div>
           </div>
           <!-- row end -->
