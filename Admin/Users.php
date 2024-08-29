@@ -138,7 +138,7 @@
         </div>
         <div class="col-md-9">
           <h2 class="display-4 text-center" style="margin-top: 20px">
-            <i class="fa fa-bed" aria-hidden="true"></i> View Bookings
+            <i class="fa fa-user" aria-hidden="true"></i> Users
           </h2>
           <!-- row start -->
           <div class="row">
@@ -146,13 +146,10 @@
               <thead class="text-center">
                 <tr>
                   <th>ID</th>
-                  <th>Name</th>
-                  <th>Address</th>
-                  <th>Phone</th>
-                  <th>Email</th>
-                  <th>No. of rooms</th>
-                  <th>Check-in Date</th>
-                  <th>Check-out Date</th>
+                  <th> First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                  <th>Password</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -160,9 +157,6 @@
               <tbody>
                 <tr>
                   <td scope="row"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
