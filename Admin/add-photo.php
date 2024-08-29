@@ -123,47 +123,14 @@
             ></i>
             &nbsp; Reservation</a
           >
-          <a
-            href="users.php"
-            class="btn btn-primary btn-block"
-            style="margin-top: 20px"
-          >
-            <i
-              class="fa fa-user"
-              aria-hidden="true"
-              style="font-size: medium"
-            ></i>
-            &nbsp; Users</a
-          >
         </div>
         <div class="col-md-9">
           <h2 class="display-4 text-center" style="margin-top: 20px">
-            Welcome
-          </h2>
-          <div class="row">
-            <div
-              class="col-md-4 bg-dark text-light text-center"
-              style="padding: 20px"
-            >
-              <i class="fa fa-user-circle" aria-hidden="true">Total Users</i>
-            </div>
+           <i class="fa fa-plus" aria-hidden="true"></i> Add New Post
+            <!-- Add row -->
 
-            <div
-              class="col-md-4 bg-success text-light text-center"
-              style="padding: 20px"
-            >
-              <i class="fa fa-bed" aria-hidden="true">Total Bookings</i>
-            </div>
+             <!-- row end -->
 
-            <div
-              class="col-md-4 bg-dark text-light text-center"
-              style="padding: 20px"
-            >
-              <i class="fa fa-bed" aria-hidden="true">Bookings</i>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- content end -->

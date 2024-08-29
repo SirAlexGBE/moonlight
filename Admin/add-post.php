@@ -138,34 +138,66 @@
         </div>
         <div class="col-md-9">
           <h2 class="display-4 text-center" style="margin-top: 20px">
-            Welcome
+            <i
+              class="fa fa-plus-circle"
+              aria-hidden="true"
+              style="color: blue"
+            ></i>
+            Add New post
           </h2>
+          <!-- row start -->
           <div class="row">
-            <div
-              class="col-md-4 bg-dark text-light text-center"
-              style="padding: 20px"
-            >
-              <i class="fa fa-user-circle" aria-hidden="true">Total Users</i>
-            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="">Title:</label>
+                <input
+                  type="Text"
+                  class="form-control"
+                  name="title"
+                  id="title"
+                  placeholder="News headline"
+                />
+              </div>
+              <div class="form-group">
+                <label for="content">Content:</label>
+                <textarea
+                  class="form-control"
+                  name="content"
+                  id="content"
+                  rows="3"
+                  placeholder="Write the news article here"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="Image">Image:</label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  name="Image"
+                  id="Image"
+                  placeholder="Add Images"
+                  aria-describedby="fileHelpId"
+                />
+                <small id="fileHelpId" class="form-text text-muted"
+                  >Maximum: 80MB
+                </small>
+              </div>
 
-            <div
-              class="col-md-4 bg-success text-light text-center"
-              style="padding: 20px"
-            >
-              <i class="fa fa-bed" aria-hidden="true">Total Bookings</i>
-            </div>
-
-            <div
-              class="col-md-4 bg-dark text-light text-center"
-              style="padding: 20px"
-            >
-              <i class="fa fa-bed" aria-hidden="true">Bookings</i>
+              <div class="form-group">
+                <button type="submit" name="submit" class="btn btn-success">
+                  Add Post
+                </button>
+                <button type="reset" name="reset" class="btn btn-danger">
+                  Cancel
+                </button>
+              </div>
             </div>
           </div>
+          <!-- row end -->
         </div>
       </div>
-    </div>
 
-    <!-- content end -->
+      <!-- content end -->
+    </div>
   </body>
 </html>

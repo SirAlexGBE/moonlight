@@ -296,7 +296,7 @@
           <center>
             <h3>Adventure Activities</h3>
             <img
-              src="Assets/Images/adv.jpg"
+              src="Assets/Images/adventure.avif"
               alt="Adventure"
               class="img-thumbnail"
               height="300"
