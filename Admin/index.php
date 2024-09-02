@@ -56,14 +56,7 @@
       <form action="" method="post">
         <div class="form-group">
           <label for="">Username</label>
-          <input
-            type="text"
-            class="form-control"
-            name="Username"
-            id="Username"
-            placeholder="Enter Your username"
-            required
-          />
+          <input type="text" class="form-control" name="Username" id="Username" placeholder="Enter Your username" required/>
         </div>
         <div class="form-group">
           <label for="">Password</label>
