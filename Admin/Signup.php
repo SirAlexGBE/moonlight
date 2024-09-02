@@ -113,11 +113,22 @@
         </div>
       </form>
       <?php
+      include 'connection.php';
       if (isset($_POST['submit'])){
+
         $a=$_POST['fname'];
         $b=$_POST['lname'];
         $c=$_POST['Username'];
         $d=$_POST['Password'];
+        $query="insert into users (First_name, Last_name, username,password) values('$a','$b','$c','$d')";
+        $run=mysqli_query($conn,$query);
+        if($run){
+          echo "<script>window.alert('Signup Successful')</script>";
+          echo "<script>window.open('Signup.php','_self')</script>";
+        }
+        else{
+          echo "<script>window.alert('Not Successful ')</script>";
+        }
       }
       ?>
     </div>
