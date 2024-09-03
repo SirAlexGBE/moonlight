@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,6 +93,8 @@
          $run=mysqli_query($conn,$query);
          if(mysqli_num_rows($run)>0)
          {
+          $_SESSION['username']=$a;
+          
           echo"<script>window.open('main.php','_self')</script>";
          }
          else
