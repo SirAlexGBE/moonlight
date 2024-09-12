@@ -5,27 +5,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta
       name="description"
       content="Hotel Moonlight Pokhara offers a serene retreat with breathtaking views of the Annapurna range. Enjoy luxurious accommodations, warm hospitality, and convenient access to Fewa Lake and local attractions. Perfect for relaxation and adventure, experience the best of Pokhara at our charming hotel."
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <meta
-      name="keywords"
-      content="Hotel Moonlight, best hotel in Pokhara, fewa lake, Adventure, Paragliding, Pame, Club, Nightlife, trekking,"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="keywords" content="Hotel Moonlight, best hotel in Pokhara, fewa lake, Adventure, Paragliding, Pame, Club, Nightlife, trekking," />
     <meta name="Author" content="Alex Kandel" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -36,11 +24,7 @@
     />
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -52,22 +36,15 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="Css/Style.css" />
-    <link
-      rel="shortcut icon"
-      href="Assets/Images/Logo.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="Assets/Images/Logo.png" type="image/x-icon" />
   </head>
   <body>
     <!-- navbar start -->
-    <nav
-      class="navbar navbar-expand-sm navbar-dark"
-      style="background-color: navy"
-    >
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: navy">
       <a class="navbar-brand" href="#">
-        <img src="Assets/Images/Logo.png" width="60px" alt="" /> Hotel
-        Moonlight</a
-      >
+        <img src="Assets/Images/Logo.png" width="60px" alt="" />
+        Hotel Moonlight
+      </a>
       <button
         class="navbar-toggler d-lg-none"
         type="button"
@@ -80,9 +57,10 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.php"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="index.php">
+              Home
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="About.php">About us</a>
@@ -104,7 +82,7 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <a href="login.php" class="btn btn-outline-warning">Login</a>
+          <a href="Admin/index.php" class="btn btn-outline-warning">Login</a>
         </form>
       </div>
     </nav>
@@ -118,85 +96,40 @@
     <!-- title end -->
     <!-- MAIN CONTENT START (b4-form-password for password) -->
 
-    <div
-      class="container-fluid"
-      style="background-color: white; padding: 0px 350px"
-    >
+    <div class="container-fluid" style="background-color: white; padding: 0px 350px">
       <div class="container" style="padding: 40px 10px; background-color: aqua">
         <form action="reserve_now.php" method="post">
           <div class="form-group">
             <label for="name">Name:</label>
-            <input
-              type="text"
-              class="form-control"
-              name="name"
-              id="name"
-              placeholder="Enter Your name"
-            />
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your name" />
           </div>
           <div class="form-group">
             <label for="Address">Address:</label>
-            <input
-              type="text"
-              class="form-control"
-              name="address"
-              id="address"
-              placeholder="Address"
-            />
+            <input type="text" class="form-control" name="address" id="address" placeholder="Address" />
           </div>
           <div class="form-group">
             <label for="phone">Contact Number:</label>
-            <input
-              type="tel"
-              class="form-control"
-              name="phone"
-              id="phone"
-              placeholder="Phone"
-            />
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" />
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input
-              type="email"
-              class="form-control"
-              name="email"
-              id="email"
-              placeholder="youremail@gmail.com"
-            />
+            <input type="email" class="form-control" name="email" id="email" placeholder="youremail@gmail.com" />
           </div>
           <div class="form-group">
             <label for="ROOMS">Number of rooms</label>
-            <input
-              type="number"
-              class="form-control"
-              name="rooms"
-              id="rooms"
-              placeholder="No.of rooms"
-            />
+            <input type="number" class="form-control" name="rooms" id="rooms" placeholder="No.of rooms" />
           </div>
           <div class="form-group">
             <label for="Check-in">Check-in date:</label>
-            <input
-              type="date"
-              name="check-in"
-              id="check-in"
-              placeholder="when do you plan to come"
-            />
+            <input type="date" name="check-in" id="check-in" placeholder="when do you plan to come" />
           </div>
           <div class="form-group">
             <label for="Check-out">Check-out date:</label>
-            <input
-              type="date"
-              name="check-out"
-              id="check-out"
-              placeholder="when do you plan to leave"
-            />
+            <input type="date" name="check-out" id="check-out" placeholder="when do you plan to leave" />
           </div>
 
           <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-success">
-              Book
-            </button>
+            <button type="submit" name="submit" class="btn btn-success">Book</button>
             <button type="reset" class="btn btn-danger">Cancel</button>
           </div>
         </form>
@@ -206,22 +139,22 @@
     <!-- MAIN CONTENT END -->
 
     <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark"
-      style="color: #ffffff; padding: 30px 0px; margin-top: 10px"
-    >
+    <div class="container-fluid bg-dark" style="color: #ffffff; padding: 30px 0px; margin-top: 10px">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <h3>Contact Details</h3>
-            <i class="fa fa-bed" aria-hidden="true"></i> Hotel Moonlight
+            <i class="fa fa-bed" aria-hidden="true"></i>
+            Hotel Moonlight
             <br />
-            <i class="fa fa-map-marker" aria-hidden="true"></i> Pokhara,Nepal
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Pokhara,Nepal
             <br />
-            <i class="fa fa-envelope" aria-hidden="true"></i
-            >info@Hotelmoonlight.com
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            info@Hotelmoonlight.com
             <br />
-            <i class="fa fa-phone" aria-hidden="true"></i> +977 9812345678
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            +977 9812345678
           </div>
           <div class="col-md-4">
             <h3 style="text-align: center">Google Maps</h3>
@@ -239,52 +172,29 @@
             <center>
               <h3>Socials</h3>
               <a href="https://www.facebook.com" target="_blank">
-                <i
-                  class="fa fa-facebook"
-                  aria-hidden="true"
-                  style="font-size: 30px"
-                ></i>
+                <i class="fa fa-facebook" aria-hidden="true" style="font-size: 30px"></i>
               </a>
-              <a href="https://www.facebook.com" target="_blank"
-                >Hotel Moonlight</a
-              ><br />
+              <a href="https://www.facebook.com" target="_blank">Hotel Moonlight</a>
+              <br />
               <a href="https://www.instagram.com" target="_blank">
-                <i
-                  class="fa fa-instagram"
-                  aria-hidden="true"
-                  style="font-size: 30px"
-                ></i
-              ></a>
-              <a href="https://www.instagram.com" target="_blank">
-                @moonlight
+                <i class="fa fa-instagram" aria-hidden="true" style="font-size: 30px"></i>
               </a>
+              <a href="https://www.instagram.com" target="_blank">@moonlight</a>
               <br />
               <a href="https://www.Twitter.com" target="_blank">
-                <i
-                  class="fa fa-twitter"
-                  aria-hidden="true"
-                  style="font-size: 30px"
-                ></i></a
-              ><a href="https://www.facebook.com" target="_blank">@moonlight</a
-              ><br />
+                <i class="fa fa-twitter" aria-hidden="true" style="font-size: 30px"></i>
+              </a>
+              <a href="https://www.facebook.com" target="_blank">@moonlight</a>
+              <br />
               <a href="https://www.Whatsapp.com" target="_blank">
-                <i
-                  class="fa fa-whatsapp"
-                  aria-hidden="true"
-                  style="font-size: 30px"
-                ></i></a
-              ><a href="https://www.whatsapp.com" target="_blank">9805868705 </a
-              ><br />
-              <a href="https://www.youtube.com" target="_blank">
-                <i
-                  class="fa fa-youtube"
-                  aria-hidden="true"
-                  style="font-size: 30px"
-                ></i>
+                <i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 30px"></i>
               </a>
+              <a href="https://www.whatsapp.com" target="_blank">9805868705</a>
+              <br />
               <a href="https://www.youtube.com" target="_blank">
-                Hotel Moonlight
+                <i class="fa fa-youtube" aria-hidden="true" style="font-size: 30px"></i>
               </a>
+              <a href="https://www.youtube.com" target="_blank">Hotel Moonlight</a>
               <br />
             </center>
             <br />
