@@ -155,14 +155,32 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td scope="row"></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                <?php
+                // database connection
+                include 'connection.php';
+                $query='select * from users';
+                $run=mysqli_query($conn,$query);
+                while($row=mysqli_fetch_array($run))
+                {
+                  $a=$row['id'];
+                  $b=$row['First_name'];
+                  $c=$row['Last_name'];
+                  $d=$row['username'];
+                  $e=$row['password'];
+                
+                 ?>
+                 <tr>
+                  <td scope="row"><?php echo $a;?></td>
+                  <td><?php echo $b;?></td>
+                  <td><?php echo $c;?></td>
+                  <td><?php echo $d;?></td>
+                  <td><?php echo $e;?></td>
+                  <td><a href="edit.php">Edit</a></td>
+                  <td><a href="delete.php">Delete</a></td>
+                 </tr>
+                 <?php
+                }
+                ?>
               </tbody>
             </table>
             <!-- row end -->
