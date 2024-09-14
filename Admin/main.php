@@ -154,21 +154,21 @@ else{
               class="col-md-4 bg-dark text-light text-center"
               style="padding: 20px"
             >
-              <i class="fa fa-user-circle" aria-hidden="true">Total Users</i>
+              <i class="fa fa-user-circle" aria-hidden="true"> Total Users</i>
             </div>
 
             <div
               class="col-md-4 bg-success text-light text-center"
               style="padding: 20px"
             >
-              <i class="fa fa-bed" aria-hidden="true">Total Bookings</i>
+              <i class="fa fa-bed" aria-hidden="true"> Total Bookings</i>
             </div>
 
             <div
               class="col-md-4 bg-dark text-light text-center"
               style="padding: 20px"
             >
-              <i class="fa fa-bed" aria-hidden="true">Bookings</i>
+              <i class="fa fa-bed" aria-hidden="true"> Bookings</i>
             </div>
           </div>
         </div>
