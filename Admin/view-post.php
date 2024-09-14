@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']))
+{
+  header("location:index.php");
+}
+else{
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,10 +67,11 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
         <form class="form-inline my-2 my-lg-0">
-          <i class="fa fa-user-circle" aria-hidden="true" style="color: white">
-            &nbsp;User</i
+        <i class="fa fa-user-circle" aria-hidden="true" style="color: white">
+            &nbsp; <?php echo $_SESSION['username'] ?></i
           >
-          &nbsp; &nbsp;
+          >
+          &nbsp; 
           <a href="logout.php">
             <i class="fa fa-sign-out" aria-hidden="true" style="color: white">
               Logout
@@ -169,3 +179,6 @@
     </div>
   </body>
 </html>
+<?php 
+}
+?>
