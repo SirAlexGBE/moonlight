@@ -160,22 +160,22 @@ else{
                 </div>
                 <div class="form-group">
                   <label for="fname">First Name</label>
-                  <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" value="<?php echo $_GET['First_name'];?>">
+                  <input type="text" class="form-control" name="fname1" id="fname" placeholder="First Name" value="<?php echo $_GET['First_name'];?>">
                 </div>
                 <div class="form-group">
                   <label for="fname">Last Name</label>
-                  <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name" value="<?php echo $_GET['Last_name'];?>">
+                  <input type="text" class="form-control" name="lname1" id="lname" placeholder="Last Name" value="<?php echo $_GET['Last_name'];?>">
                 </div>
                 <div class="form-group">
                   <label for="fname">User Name</label>
-                  <input type="text" class="form-control" name="uname" id="uname" placeholder="Username" value="<?php echo $_GET['username'];?>">
+                  <input type="text" class="form-control" name="uname1" id="uname" placeholder="Username" value="<?php echo $_GET['username'];?>">
                 </div>
                 <div class="form-group">
                   <label for="password1">Password</label>
-                  <input type="text" class="form-control" name="password1" id="password1" placeholder="Password" value="<?php echo $_GET['password'];?>">
+                  <input type="text" class="form-control" name="password1" id="password1" placeholder="Password" value="<?php echo $_GET['password']; ?>">
                 </div>
                 <div class="form-group">
-                <button type="submit" class="btn btn-success">Update</button>
+                <button type="submit" name="submit" class="btn btn-success">Update</button>
                 <button type="reset" class="btn btn-danger">Cancel</button>
                 </div>
             </form>
