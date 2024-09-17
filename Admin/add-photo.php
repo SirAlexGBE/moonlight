@@ -99,7 +99,7 @@ else{
           <!-- row start -->
           <div class="row">
             <div class="col-md-12">
-              <form action="" method="post">
+              <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="Image">Image:</label>
                   <input type="file" class="form-control-file" name="Image" id="Image" placeholder="Add Images" aria-describedby="fileHelpId" />
@@ -111,6 +111,17 @@ else{
                   <button type="reset" name="reset" class="btn btn-danger">Cancel</button>
                 </div>
               </form>
+              <?php
+              if(isset($_POST['submit'])){
+                $image_name=$_FILES['Image']['name'];
+                        $image_type=$_FILES['Image']['type'];
+                        $image_tmp=$_FILES['Image']['tmp_name'];
+                        move_uploaded_file("$image_tmp","../assets/Images/$image_name");
+                        echo "File uploaded successfully!"."<br>";
+                        echo "<img src='../assets/Images/$image_name' width='300px'>";
+
+              }
+              ?>
             </div>
           </div>
           <!-- row end -->
