@@ -157,14 +157,16 @@ else{
           <!-- row start -->
           <div class="row">
             <div class="col-md-12">
+            <form action="" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="">Title:</label>
                 <input
-                  type="Text"
+                  type="text"
                   class="form-control"
                   name="title"
                   id="title"
                   placeholder="News headline"
+                  aria-describedby="helpId"
                 />
               </div>
               <div class="form-group">
@@ -182,8 +184,8 @@ else{
                 <input
                   type="file"
                   class="form-control-file"
-                  name="Image"
-                  id="Image"
+                  name="image"
+                  id="image"
                   placeholder="Add Images"
                   aria-describedby="fileHelpId"
                 />
@@ -200,6 +202,30 @@ else{
                   Cancel
                 </button>
               </div>
+            </form>
+            <?php
+            if(isset($_POST['submit']))
+            {
+                include 'connection.php';
+                $title=$_POST['title'];
+                $content=$_POST['content'];
+                $image_name=$_FILES['image']['name'];
+                $image_type=$_FILES['image']['type'];
+                $image_tmp=$_FILES['image']['tmp_name'];
+                $query="insert into posts(title,content,image)values('$title','$content','$image_name')";
+                $run=mysqli_query($conn,$query);
+                move_uploaded_file("$image_tmp","../Assets/Images/$image_name");
+                if($run)
+                {
+                    echo "<script>window.alert('Post Added Successfully!')</script>";
+                }
+                else
+                {
+                    echo "<script>window.alert('Error Found!')</script>";
+                }
+            }
+            
+            ?>
             </div>
           </div>
           <!-- row end -->

@@ -146,58 +146,39 @@ else{
             &nbsp; Users</a
           >
         </div>
-        <div class="col-md-9">
-          <h2 class="display-4 text-center" style="margin-top: 20px">
-            <i class="fa fa-newspaper-o" aria-hidden="true"></i> View All Post
-          </h2>
-          <!-- row start -->
-          <div class="row">
-            <table class="table table-dark table-hover table-bordered">
-              <thead class="text-center">
-                <tr>
-                  <th>ID</th>
-                  <th>Title</th>
-                  <th>Content</th>
-                  <th>Photo</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-                </tr>
-              </thead>
-              <?php
-                include 'connection.php';
-                $query="select * from posts";
-                $run=mysqli_query($conn,$query);
-                while($row=mysqli_fetch_array($run))
-                {
-                    $a=$row['id'];
-                    $b=$row['title'];
-                    $c=$row['content'];
-                    $d=$row['image'];  
-                    ?> 
-                <tbody>
-                <tr>
-                  <td scope="row"><?php echo $a; ?></td>
-                        <td><?php echo $b; ?></td>
-                        <td><?php echo $c; ?></td>
-                        <td><img src="../images/<?php echo $d; ?>" width="100px"></td>
-                        <td><a class="btn btn-primary" href="edit-post.php?id=<?php echo $a; ?>&title=<?php echo $b; ?>&content=<?php echo $c; ?>&image=<?php echo $d; ?>">Edit</a></td>
-                        <td><a class="btn btn-danger" href="delete-post.php?Del=<?php echo $a; ?>">Delete</a></td>
-                
-                </tr>
-              </tbody>
-              <?php 
-                }
-                ?>
-            </table>
-            <!-- row end -->
-          </div>
+        <div class="col-md-8">
+            <h2 class="display-4">Update Post</h2>
+            <form action="update-post.php" method="get" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="ID">ID:</label>
+                  <input type="text" name="id1" id="id1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['id']; ?>">
+                </div>
+                <!-- title -->
+                <div class="form-group">
+                  <label for="title">Title:</label>
+                  <input type="text" name="title1" id="title1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['title']; ?>">
+                </div>
+                <!-- content -->
+                <div class="form-group">
+                  <label for="content">Content:</label>
+                  <textarea class="form-control" name="content1" id="content1" rows="5">
+                    <?php echo $_GET['content']; ?>
+                  </textarea>
+                </div>
+                <!-- image -->
+                <div class="form-group">
+                  <label for="image">Image:</label>
+                  <input type="text" name="image1" id="image1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['image']; ?>">
+                </div>
+                <!-- submit button -->
+                <button type="submit" class="btn btn-success btn-lg" name="submit">Update Post</button>
+            </form>
         </div>
-
-        <!-- content end -->
-      </div>
+    </div>        
     </div>
+    <!-- dashboard end -->
   </body>
-  </html>
+</html>
 <?php
-                }
-                ?>
+}
+?>

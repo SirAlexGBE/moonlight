@@ -133,8 +133,7 @@
         ?>
     </div>
 </div>
-
-      </div>
+</div>
     <!-- Footer Start -->
     <div
       class="container-fluid bg-dark"
