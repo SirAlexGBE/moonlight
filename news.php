@@ -94,6 +94,10 @@
       </div>
     </div>
     <!-- title end -->
+     <?php
+     include 'connection.php'
+    
+     ?>
     <!-- main body start -->
     <div class="container-fluid" style="padding: 20px; background-color: white">
       <div class="row">

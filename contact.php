@@ -112,8 +112,27 @@
               <label for="message">Message</label>
               <textarea name="message" id="message" placeholder="Your Message here" class="form-control"></textarea>
             </div>
-            <input type="submit" value="Submit" class="btn btn-outline-success" />
+            <input type="submit" value="Submit"  name="submit" class="btn btn-outline-success" />
+            <button type="button" class="btn btn-danger">Cancel</button>
           </form>
+          <?php
+          if(isset($_POST['submit'])){
+            $to="ctit23.ylk@ismt.edu.np";
+            $name=$_POST['name'];
+            $email=$_POST['email'];
+            $message=$name."<br>".$email ."<br>".$_POST['message'];
+            $subject="Query by" .$name;
+            $headers="From: $email";
+            if(mail($to,$subject,$message,$headers)){
+              echo "Message Sent Successfully";
+            }
+            else{
+              echo "mail not sent";
+            }
+          }
+          
+          ?>
+
         </div>
         <div class="col-md-6">
           <h3>Contact Details</h3>
