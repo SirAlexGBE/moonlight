@@ -7,7 +7,6 @@ if(!isset($_SESSION['username']))
 else{
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -69,8 +68,10 @@ else{
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
         <form class="form-inline my-2 my-lg-0">
         <i class="fa fa-user-circle" aria-hidden="true" style="color: white">
-            <?php echo $_SESSION['username'] ?></i
-          >  &nbsp; &nbsp;
+            &nbsp; <?php echo $_SESSION['username'] ?></i
+          >
+          >
+          &nbsp; 
           <a href="logout.php">
             <i class="fa fa-sign-out" aria-hidden="true" style="color: white">
               Logout
@@ -145,69 +146,47 @@ else{
             &nbsp; Users</a
           >
         </div>
-        <div class="col-md-9">
-          <h2 class="display-4 text-center" style="margin-top: 20px">
-            <i class="fa fa-bed" aria-hidden="true"></i> View Bookings
-          </h2>
-          <!-- row start -->
-          <div class="row">
-            <table class="table table-dark table-hover table-bordered">
-              <thead class="text-center">
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Address</th>
-                  <th>Phone</th>
-                  <th>Email</th>
-                  <th>No. of rooms</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php
-                // database connection
-                include 'connection.php';
-                $query='select * from bookings';
-                $run=mysqli_query($conn,$query);
-                while($row=mysqli_fetch_array($run))
-                {
-                  $a=$row['ID'];
-                  $b=$row['name'];
-                  $c=$row['address'];
-                  $d=$row['phone'];
-                  $e=$row['email'];
-                  $f=$row['rooms'];
-             
-                 ?>
-                <tr>
-                <td scope="row"><?php echo $a;?></td>
-                  <td><?php echo $b;?></td>
-                  <td><?php echo $c;?></td>
-                  <td><?php echo $d;?></td>
-                  <td><?php echo $e;?></td>
-                  <td><?php echo $f;?></td>
-
-                  
-                  <td><a href="edit-booking.php?ID=<?php echo $a;?> &name= <?php echo $b;?>&address=<?php echo $c;?> &phone=<?php echo $d;?> &email=<?php echo $e;?> &rooms=<?php echo $f;?>"> Edit</a></td>
-                  <td><a href="delete-booking.php?Del=<?php echo $a; ?>">Delete</a></td>
-                 </tr>
-                 <?php
-                }
-                ?>
-                  
-              
-              </tbody>
-            </table>
-            <!-- row end -->
-          </div>
+        <div class="col-md-8">
+            <h2 class="display-4">Update Booking</h2>
+            <form action="update-booking.php" method="get" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="ID">ID:</label>
+                  <input type="text" name="id1" id="id1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['id']; ?>">
+                </div>
+                <!-- name-->
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" name="name1" id="name1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['name']; ?>">
+                </div>
+                <!-- Address -->
+                <div class="form-group">
+                  <label for="Address">Address:</label>
+                  <input type="text" name="address1" id="address1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['address']; ?>">
+                </div>
+                <!-- phone -->
+                <div class="form-group">
+                  <label for="phone">Phone:</label>
+                  <input type="text" name="phone1" id="phone1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['phone']; ?>">
+                </div>
+                <!-- email -->
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="text" name="email1" id="email1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['email']; ?>">
+                </div>
+                 <!-- no of room -->
+                 <div class="form-group">
+                  <label for="rooms">rooms:</label>
+                  <input type="number" name="rooms1" id="rooms1" class="form-control" placeholder="" aria-describedby="helpId" value="<?php echo $_GET['rooms']; ?>">
+                </div>
+                <!-- submit button -->
+                <button type="submit" class="btn btn-success btn-lg" name="submit">Update Booking</button>
+            </form>
         </div>
-
-        <!-- content end -->
-      </div>
+    </div>        
     </div>
+    <!-- dashboard end -->
   </body>
 </html>
-<?php 
+<?php
 }
 ?>

@@ -98,41 +98,56 @@
 
     <div class="container-fluid" style="background-color: white; padding: 0px 350px">
       <div class="container" style="padding: 40px 10px; background-color: aqua">
-        <form action="reserve_now.php" method="post">
+        <form action="" method="post">
           <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your name" />
+            <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your name" required />
           </div>
           <div class="form-group">
             <label for="Address">Address:</label>
-            <input type="text" class="form-control" name="address" id="address" placeholder="Address" />
+            <input type="text" class="form-control" name="address" id="address" placeholder="Address" required />
           </div>
           <div class="form-group">
             <label for="phone">Contact Number:</label>
-            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" />
+            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone" required />
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="youremail@gmail.com" />
+            <input type="email" class="form-control" name="email" id="email" placeholder="youremail@gmail.com" required />
           </div>
           <div class="form-group">
             <label for="ROOMS">Number of rooms</label>
-            <input type="number" class="form-control" name="rooms" id="rooms" placeholder="No.of rooms" />
+            <input type="number" class="form-control" name="rooms" id="rooms" placeholder="No.of rooms" required />
           </div>
-          <div class="form-group">
-            <label for="Check-in">Check-in date:</label>
-            <input type="date" name="check-in" id="check-in" placeholder="when do you plan to come" />
-          </div>
-          <div class="form-group">
-            <label for="Check-out">Check-out date:</label>
-            <input type="date" name="check-out" id="check-out" placeholder="when do you plan to leave" />
-          </div>
+   
 
           <div class="form-group">
             <button type="submit" name="submit" class="btn btn-success">Book</button>
             <button type="reset" class="btn btn-danger">Cancel</button>
           </div>
         </form>
+        <?php
+        include 'admin/connection.php';
+        if (isset($_POST['submit'])){
+
+          $a=$_POST['name'];
+          $b=$_POST['address'];
+          $c=$_POST['phone'];
+          $d=$_POST['email'];
+          $e=$_POST['rooms'];
+
+
+          $query="insert into bookings (name, address, phone, email, rooms) values('$a','$b','$c','$d', $e )";
+          $run=mysqli_query($conn,$query);
+          if($run){
+            echo "<script>window.alert('Booking Successful')</script>";
+            echo "<script>window.open('Booking.php','_self')</script>";
+          }
+          else{
+            echo "<script>window.alert('Not Successful ')</script>";
+          }
+        }
+        ?>
       </div>
     </div>
 
