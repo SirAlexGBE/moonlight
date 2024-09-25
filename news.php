@@ -94,43 +94,37 @@
       </div>
     </div>
     <!-- title end -->
-     <?php
-     include 'connection.php'
     
-     ?>
     <!-- main body start -->
     <div class="container-fluid" style="padding: 20px; background-color: white">
+    <?php
+     include 'Admin/connection.php';
+     $query='select * from posts order by rand()';
+     $run=mysqli_query($conn,$query);
+     while($row=mysqli_fetch_array($run))
+     {
+                     $a=$row['id'];
+                    $b=$row['title'];
+                    $c=$row['content'];
+                    $d=$row['image'];  
+                    ?> 
+
       <div class="row">
         <div class="col-md-8">
-          <h3>Hotel Moonlight Ranked as the Top Hotel in Pokhara</h3>
+          <h3>
+            <?php echo $b ?>
+          </h3>
           <p>
-            Pokhara, Nepal – August 2024 – Hotel Moonlight has been officially ranked as the number one hotel in Pokhara, solidifying its reputation as a premier destination for luxury and comfort in
-            the heart of Nepal’s most scenic city. This prestigious ranking comes as a result of consistent excellence in service, outstanding guest reviews, and a commitment to providing an
-            unparalleled hospitality experience. Since its inception in 2008, Hotel Moonlight has been a beacon of elegance and sophistication, offering guests a unique blend of modern amenities and
-            traditional Nepali charm. The hotel’s dedication to quality has earned it top marks across multiple platforms, with visitors praising everything from its meticulously designed rooms and
-            breathtaking views of the Annapurna range to its exceptional dining experiences and wide array of adventure activities.
-            <a href="#">readmore...</a>
+          <?php echo $c ?>
           </p>
         </div>
         <div class="col-md-4">
-          <img src="Assets/Images/Outdoor.jpeg" alt="hotel" class="img-thumbnail" style="height: 250px" />
+        <img src="assets/images/<?php echo $d; ?>" class= "img-thumbnail">
         </div>
       </div>
-      <div class="row" style="background-color: rgb(192, 255, 232)">
-        <div class="col-md-8">
-          <h3>Hotel Moonlight Expands Adventure Offerings to Meet Rising Demand in Pokhara</h3>
-          <p>
-            Pokhara, Nepal – August 2024 – Hotel Moonlight is taking its commitment to providing exceptional guest experiences to new heights with the expansion of its adventure offerings, responding
-            to the growing demand from tourists eager to explore the natural wonders of Pokhara. Known for its luxury accommodations and outstanding service, the hotel is now enhancing its portfolio
-            of activities to include even more thrilling options for adventure seekers. Located in the heart of one of Nepal’s most picturesque destinations, Hotel Moonlight has long been a favorite
-            among travelers seeking both relaxation and excitement.
-            <a href="#">readmore...</a>
-          </p>
-        </div>
-        <div class="col-md-4">
-          <img src="Assets/Images/restro.jpg" alt="restro" class="img-thumbnail" style="height: 250px" />
-        </div>
-      </div>
+      <?php
+     }
+      ?>
     </div>
     <!-- Main body end -->
     <!-- Footer Start -->
